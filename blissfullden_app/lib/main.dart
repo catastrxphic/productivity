@@ -37,7 +37,8 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   Client client = http.Client();
-  List<Task> task = [];
+  var url = Uri.parse('http://127.0.0.1:8000/tasks/');
+  List<Task> tasks = [];
 
   @override
   void initState(){
@@ -46,29 +47,34 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 
   void _retrieveTasks() async {
-    task = [];
+    tasks = [];
 
-    List response = json.decode((await client.get(local)).body);
+    List response = json.decode((await client.get(url)).body);
+    response.forEach((element) { 
+      tasks.add(Task.fromMap(element));
+    });
 
+    setState(() {});
   }
-  void _addTask(){
-
-  }
-  }
+  void _addTask(){}
+  
 
   @override
   Widget build(BuildContext context) {
-   
     return Scaffold(
       appBar: AppBar(
-        
-        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
         title: Text(widget.title),
       ),
     
-      body: Column(
-        children: <Widget>[Text("Task 1")],
+      body: ListView.builder(
+        itemCount: tasks.length, 
+        itemBuilder: (BuildContext context, int index) {
+          return ListTile(
+            title: Text(tasks[index].task),
+          );
+        }, 
       ),
+
       floatingActionButton: FloatingActionButton(
         onPressed: _addTask,
         tooltip: 'Increment',
