@@ -28,11 +28,14 @@ class Task {
   }
 
   factory Task.fromMap(Map<String, dynamic> map) {
+    
     return Task(
       id: map['id'],
       task: map['task'],
     );
   }
+
+
 
   String toJson() => json.encode(toMap());
 
