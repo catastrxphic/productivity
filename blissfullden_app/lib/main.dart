@@ -1,4 +1,10 @@
+import 'dart:convert';
+
+import 'package:blissfullden_app/task.dart';
 import 'package:flutter/material.dart';
+import 'package:http/http.dart' as http;
+import 'package:http/http.dart';
+
 
 void main() {
   runApp(const MyApp());
@@ -30,11 +36,24 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
+  Client client = http.Client();
+  List<Task> task = [];
 
-  void _incrementCounter() {
-    setState(() {
-    });
+  @override
+  void initState(){
+    _retrieveTasks();
+    super.initState();
+  }
+
+  void _retrieveTasks() async {
+    task = [];
+
+    List response = json.decode((await client.get(local)).body);
+
+  }
+  void _addTask(){
+
+  }
   }
 
   @override
@@ -51,7 +70,7 @@ class _MyHomePageState extends State<MyHomePage> {
         children: <Widget>[Text("Task 1")],
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
+        onPressed: _addTask,
         tooltip: 'Increment',
         child: const Icon(Icons.add),
       ), // This trailing comma makes auto-formatting nicer for build methods.
