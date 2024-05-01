@@ -35,8 +35,6 @@ class Task {
     );
   }
 
-
-
   String toJson() => json.encode(toMap());
 
   factory Task.fromJson(String source) => Task.fromMap(json.decode(source) as Map<String, dynamic>);
