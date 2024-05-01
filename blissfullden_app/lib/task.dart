@@ -21,16 +21,17 @@ class Task {
   }
 
   Map<String, dynamic> toMap() {
-    return <String, dynamic>{
+    return {
       'id': id,
       'body': task,
     };
   }
 
   factory Task.fromMap(Map<String, dynamic> map) {
+    
     return Task(
-      id: map['id'] as int,
-      task: map['task'] as String,
+      id: map['id'],
+      task: map['task'],
     );
   }
 

@@ -1,4 +1,10 @@
+import 'dart:convert';
+
+import 'package:blissfullden_app/task.dart';
 import 'package:flutter/material.dart';
+import 'package:http/http.dart' as http;
+import 'package:http/http.dart';
+
 
 void main() {
   runApp(const MyApp());
@@ -30,28 +36,47 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
+  Client client = http.Client();
+  var url = Uri.parse('http://127.0.0.1:8000/tasks/');
+  List<Task> tasks = [];
 
-  void _incrementCounter() {
-    setState(() {
-    });
+  @override
+  void initState(){
+    _retrieveTasks();
+    super.initState();
   }
+
+  void _retrieveTasks() async {
+    tasks = [];
+
+    List response = json.decode((await client.get(url)).body);
+    response.forEach((element) { 
+      tasks.add(Task.fromMap(element));
+    });
+
+    setState(() {});
+  }
+  void _addTask(){}
+  
 
   @override
   Widget build(BuildContext context) {
-   
     return Scaffold(
       appBar: AppBar(
-        
-        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
         title: Text(widget.title),
       ),
     
-      body: Column(
-        children: <Widget>[Text("Task 1")],
+      body: ListView.builder(
+        itemCount: tasks.length, 
+        itemBuilder: (BuildContext context, int index) {
+          return ListTile(
+            title: Text(tasks[index].task),
+          );
+        }, 
       ),
+
       floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
+        onPressed: _addTask,
         tooltip: 'Increment',
         child: const Icon(Icons.add),
       ), // This trailing comma makes auto-formatting nicer for build methods.
