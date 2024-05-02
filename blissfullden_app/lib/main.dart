@@ -46,16 +46,28 @@ class _MyHomePageState extends State<MyHomePage> {
     super.initState();
   }
 
+  // void _retrieveTasks() async {
+  //   tasks = [];
+
+  //   List response = json.decode((await client.get(url)).body);
+  //   response.forEach((element) { 
+  //     tasks.add(Task.fromMap(element));
+  //   });
+
+  //   setState(() {});
+  // }
+
   void _retrieveTasks() async {
     tasks = [];
 
     List response = json.decode((await client.get(url)).body);
-    response.forEach((element) { 
+    for (var element in response) {
       tasks.add(Task.fromMap(element));
-    });
+    }
 
-    setState(() {});
+    setState(() {});  
   }
+
   void _addTask(){}
   
 

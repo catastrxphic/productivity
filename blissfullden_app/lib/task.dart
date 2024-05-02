@@ -27,13 +27,32 @@ class Task {
     };
   }
 
-  factory Task.fromMap(Map<String, dynamic> map) {
+  // factory Task.fromMap(Map<String, dynamic> map) {
     
+  //   return Task(
+  //     id: map['id'],
+  //     task: map['task'],
+  //   );
+  // }
+
+  factory Task.fromMap(Map<String, dynamic> map) {
+    if (!map.containsKey('id') || !map.containsKey('task')) {
+      throw ArgumentError("Invalid map: 'id' or 'task' key is missing");
+    }
+
+    final int? id = map['id'] as int?;
+    final String? task = map['task'] as String?;
+
+    if (id == null || task == null) {
+      throw ArgumentError("Invalid map: 'id' or 'task' value is null");
+    }
+
     return Task(
-      id: map['id'],
-      task: map['task'],
+      id: id,
+      task: task,
     );
   }
+
 
   String toJson() => json.encode(toMap());
 
