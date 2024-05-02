@@ -1,6 +1,8 @@
 import 'dart:convert';
 
+import 'package:blissfullden_app/create.dart';
 import 'package:blissfullden_app/task.dart';
+import 'package:blissfullden_app/update.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'package:http/http.dart';
@@ -38,6 +40,7 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   Client client = http.Client();
   var url = Uri.parse('http://127.0.0.1:8000/tasks/');
+
   List<Task> tasks = [];
 
   @override
@@ -50,36 +53,65 @@ class _MyHomePageState extends State<MyHomePage> {
     tasks = [];
 
     List response = json.decode((await client.get(url)).body);
-    response.forEach((element) { 
+    for (var element in response) {
       tasks.add(Task.fromMap(element));
-    });
+    }
 
-    setState(() {});
+    setState(() {});  
   }
-  void _addTask(){}
+
+  void _deleteTask(int id){
+    var deleteUrl = Uri.parse('http://127.0.0.1:8000/tasks/$id/delete/');
+    client.delete(deleteUrl);
+    _retrieveTasks();
+  }
   
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+
       appBar: AppBar(
         title: Text(widget.title),
       ),
     
-      body: ListView.builder(
-        itemCount: tasks.length, 
-        itemBuilder: (BuildContext context, int index) {
-          return ListTile(
-            title: Text(tasks[index].task),
-          );
-        }, 
+      body: RefreshIndicator(
+        onRefresh: () async {
+          _retrieveTasks();
+        },
+        child: ListView.builder(
+          itemCount: tasks.length, 
+          itemBuilder: (BuildContext context, int index) {
+            return ListTile(
+              title: Text(tasks[index].task),
+              onTap: () {
+                Navigator.of(context).push(
+                  MaterialPageRoute(builder: (context)=> UpdatePage(
+                    client:client,
+                    id:tasks[index].id,
+                    task: tasks[index].task,
+                  ))
+                );
+              },
+              trailing: IconButton(
+                icon: Icon(Icons.delete), 
+                onPressed: () => _deleteTask(tasks[index].id),
+              ),
+            );
+          }, 
+        ),
       ),
 
       floatingActionButton: FloatingActionButton(
-        onPressed: _addTask,
+        onPressed: () => Navigator.of(context).push(
+          MaterialPageRoute(builder: (context)=> CreatePage(
+            client:client,
+
+          ))
+        ),
         tooltip: 'Increment',
         child: const Icon(Icons.add),
-      ), // This trailing comma makes auto-formatting nicer for build methods.
+      ),
       );
   }
 }
