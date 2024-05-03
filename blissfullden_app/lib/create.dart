@@ -9,18 +9,18 @@ class CreatePage extends StatefulWidget {
     }) : super(key: key);
 
   @override
-  _CreatePageState createState() => _CreatePageState();
+  CreatePageState createState() => CreatePageState();
 
 }
 
-class _CreatePageState extends State<CreatePage>{
+class CreatePageState extends State<CreatePage>{
   TextEditingController controller = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Create"),
+        title: const Text("Create"),
       ),
       body: Column(
         children: [
@@ -34,7 +34,7 @@ class _CreatePageState extends State<CreatePage>{
               var createUrl = Uri.parse('http://127.0.0.1:8000/tasks/create/');
               widget.client.post(createUrl,body: {'body':controller.text});
               Navigator.pop(context);
-            }, child: Text("Create Note"))
+            }, child:const Text("Create Note"))
         ],
       ),
     );

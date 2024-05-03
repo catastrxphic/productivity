@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
-class my_textfield extends StatelessWidget {
+class MyTextfield extends StatelessWidget {
   final controller;
   final String hintText;
   final bool obscureText;
 
-  const my_textfield({
+  const MyTextfield({
     super.key,
     required this.controller,
     required this.hintText,
@@ -23,7 +23,7 @@ class my_textfield extends StatelessWidget {
                     enabledBorder:const OutlineInputBorder(
                       borderSide: BorderSide(color: Color.fromARGB(255, 8, 0, 10))
                     ),
-                    fillColor: Color.fromARGB(255, 202, 132, 230), 
+                    fillColor: const Color.fromARGB(255, 202, 132, 230), 
                     filled: true,
                     hintText: hintText,
                   ),

@@ -13,11 +13,11 @@ class UpdatePage extends StatefulWidget {
     }) : super(key: key);
 
   @override
-  _UpdatePageState createState() => _UpdatePageState();
+  UpdatePageState createState() => UpdatePageState();
 
 }
 
-class _UpdatePageState extends State<UpdatePage>{
+class UpdatePageState extends State<UpdatePage>{
   TextEditingController controller = TextEditingController();
   @override
   void initState() {
@@ -29,7 +29,7 @@ class _UpdatePageState extends State<UpdatePage>{
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Update"),
+        title: const Text("Update"),
       ),
       body: Column(
         children: [
@@ -43,7 +43,7 @@ class _UpdatePageState extends State<UpdatePage>{
               var updateUrl = Uri.parse('http://127.0.0.1:8000/tasks/${widget.id}/update/');
               widget.client.put(updateUrl,body: {'body':controller.text});
               Navigator.pop(context);
-            }, child: Text("Update Note"))
+            }, child: const Text("Update Note"))
         ],
       ),
     );
