@@ -36,6 +36,18 @@ def getRoutes(request):
 
     routes = [
         {
+            'Endpoint': '/blissfullden/login/',
+            'method': 'POST',
+            'body': None,
+            'description': "Logs users in"
+        },
+        {
+            'Endpoint': '/blissfullden/signup/',
+            'method': 'POST',
+            'body': None,
+            'description': "Creates a user"
+        },
+        {
             'Endpoint': '/blissfullden/',
             'method': 'GET',
             'body': None,
