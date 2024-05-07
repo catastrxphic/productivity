@@ -18,17 +18,35 @@ def login(request):
     serializer = UserSerializer(instance=user)
     return Response({"token":token.key, "user": serializer.data})
 
-@api_view (['POST'])
+@api_view(['POST'])
 def signup(request):
     serializer = UserSerializer(data=request.data)
     if serializer.is_valid():
-        serializer.save()
-        user = User.objects.get(username= request.data['username'])
-        user.set_password(request.data['password']) # hashing password
-        user.save()
+        # Create the user object but don't save it yet
+        user = User.objects.create(username=request.data['username'])
+        user.set_password(request.data['password']) # Set the password
+        user.save()  # Save the user object
+
+        # Now, create a token for the user
         token = Token.objects.create(user=user)
-        return Response({"token":token.key, "user":serializer.data})
+        
+        # Serialize the user data
+        serializer = UserSerializer(instance=user)
+
+        return Response({"token": token.key, "user": serializer.data})
     return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+# @api_view (['POST'])
+# def signup(request):
+#     serializer = UserSerializer(data=request.data)
+#     if serializer.is_valid():
+#         serializer.save()
+#         user = User.objects.get(username= request.data['username'])
+#         user.set_password(request.data['password']) # hashing password
+#         user.save()
+#         token = Token.objects.create(user=user)
+#         return Response({"token":token.key, "user":serializer.data})
+#     return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 
 @api_view(['GET'])
