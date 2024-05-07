@@ -20,12 +20,14 @@ class RegisterPage extends StatelessWidget {
     );
 
     if (response.statusCode == 200) {
+      // ignore: use_build_context_synchronously
       Navigator.of(context).push(
         MaterialPageRoute(
           builder: (context) => const MyHomePage(title: 'home',),
         ),
       );
     } else {
+      // ignore: use_build_context_synchronously
       ScaffoldMessenger.of(context).showSnackBar(
         const SnackBar(
           content: Text('Sign Up failed.'),
@@ -85,8 +87,8 @@ class RegisterPage extends StatelessWidget {
                     ),
 
                     const SizedBox(height: 10),
-                    Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 25.0),
+                    const Padding(
+                      padding: EdgeInsets.symmetric(horizontal: 25.0),
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.end,
                         children: [
@@ -110,9 +112,9 @@ class RegisterPage extends StatelessWidget {
                           ),
                         );
                       },
-                      child: Row(
+                      child: const Row(
                         mainAxisAlignment: MainAxisAlignment.center,
-                        children: const [
+                        children: [
                           Text(
                             'Already registered?',
                             style: TextStyle(color: Colors.grey),

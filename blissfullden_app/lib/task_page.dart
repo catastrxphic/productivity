@@ -13,6 +13,7 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
+  // ignore: use_key_in_widget_constructors
   const MyApp({Key? key});
 
   @override
@@ -29,6 +30,7 @@ class MyApp extends StatelessWidget {
 }
 
 class MyHomePage extends StatefulWidget {
+  // ignore: use_super_parameters
   const MyHomePage({Key? key, required this.title}) : super(key: key);
   final String title;
 
@@ -74,7 +76,7 @@ class _MyHomePageState extends State<MyHomePage> {
       body: Stack(
         children: [
           // Background image with blur effect
-          Container(
+          SizedBox(
             width: double.infinity,
             height: double.infinity,
             child: Image.asset(
@@ -110,7 +112,7 @@ class _MyHomePageState extends State<MyHomePage> {
                         );
                       },
                       trailing: IconButton(
-                        icon: Icon(Icons.delete),
+                        icon: const Icon(Icons.delete),
                         onPressed: () => _deleteTask(tasks[index].id),
                       ),
                     );

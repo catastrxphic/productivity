@@ -64,6 +64,8 @@ flutter:
   assets:
     - lib/images/codingstudy.jpeg
     - lib/images/Pin by Renée on wallpaper _ Scenery wallpaper, Beautiful art pictures, Aesthetic backgrounds.jpeg
+    - lib/images/d2ca3cf6d0769f2d550a50664c100617.jpg
+    - lib/images/sakuravending.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

@@ -10,11 +10,11 @@
 		</data>
 		<key>flutter_assets/AssetManifest.bin</key>
 		<data>
-		Hb1jvKzdH0ZeYhCikKfQV7Ps7MM=
+		SUYop3okaNFJtfEnOzk3Ojwkk+8=
 		</data>
 		<key>flutter_assets/AssetManifest.json</key>
 		<data>
-		MzL4hsivraQWC13lLW4Q8Xtb5Mk=
+		rYrCZlbD5JbbZ0kunaA5Blx1PMo=
 		</data>
 		<key>flutter_assets/FontManifest.json</key>
 		<data>
@@ -34,7 +34,7 @@
 		</data>
 		<key>flutter_assets/kernel_blob.bin</key>
 		<data>
-		giiQXfRvuJaxy7s0VxHYbRVE8IM=
+		dLWAVcJzF4s4GCvO/ixZuwrVdFQ=
 		</data>
 		<key>flutter_assets/lib/images/Pin%20by%20Ren%C3%A9e%20on%20wallpaper%20_%20Scenery%20wallpaper,%20Beautiful%20art%20pictures,%20Aesthetic%20backgrounds.jpeg</key>
 		<data>
@@ -43,6 +43,14 @@
 		<key>flutter_assets/lib/images/codingstudy.jpeg</key>
 		<data>
 		hfgUe6c4SgsJBp6IOWQbHK6YDng=
+		</data>
+		<key>flutter_assets/lib/images/d2ca3cf6d0769f2d550a50664c100617.jpg</key>
+		<data>
+		WRdHKDS6qjMcksdjp/ThUl9KN1Y=
+		</data>
+		<key>flutter_assets/lib/images/sakuravending.jpeg</key>
+		<data>
+		vVckxw8/7EB7RpIc17hqmBYfxAY=
 		</data>
 		<key>flutter_assets/packages/cupertino_icons/assets/CupertinoIcons.ttf</key>
 		<data>
@@ -63,14 +71,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			/1NkiqaZqf2g35oK+mgcsea2ILCiBFlPNuOKiaMrb8k=
+			B/UwFyAstrXm+qYnIIDHynjum0sbJ5hWfbduSIKxWhI=
 			</data>
 		</dict>
 		<key>flutter_assets/AssetManifest.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			2uXqim81Tz/qkqCpMilbAExAYT5WMH1eatkT1gWu4X4=
+			iKWqBB7O9MsynxSjfuPfvd9see3nk+e8XRSLHFkTkhc=
 			</data>
 		</dict>
 		<key>flutter_assets/FontManifest.json</key>
@@ -105,7 +113,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			q06AVHYA44TCljy0qUPcwTjvWUR4bZp5jaDC7jlhdpM=
+			akg2oo0zZTBf4cc+p9DehgCyfb1pzXqZVMr/CbU2zM4=
 			</data>
 		</dict>
 		<key>flutter_assets/lib/images/Pin%20by%20Ren%C3%A9e%20on%20wallpaper%20_%20Scenery%20wallpaper,%20Beautiful%20art%20pictures,%20Aesthetic%20backgrounds.jpeg</key>
@@ -120,6 +128,20 @@
 			<key>hash2</key>
 			<data>
 			OszsN2/uMV31Xb5ZzJqi8ItcbgDVqJhMyHruzV4JVBs=
+			</data>
+		</dict>
+		<key>flutter_assets/lib/images/d2ca3cf6d0769f2d550a50664c100617.jpg</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			ATitcWDTOX6ozqrKB23U0v9bNU1BI47YQnr5gV7IHwM=
+			</data>
+		</dict>
+		<key>flutter_assets/lib/images/sakuravending.jpeg</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			6ss/wEFUbUVLEiN3aUSFGXyB4LaUw+7XsImYhnMe768=
 			</data>
 		</dict>
 		<key>flutter_assets/packages/cupertino_icons/assets/CupertinoIcons.ttf</key>
