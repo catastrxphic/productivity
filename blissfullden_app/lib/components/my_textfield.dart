@@ -21,9 +21,9 @@ class MyTextfield extends StatelessWidget {
                   obscureText: obscureText ,
                   decoration: InputDecoration(
                     enabledBorder:const OutlineInputBorder(
-                      borderSide: BorderSide(color: Color.fromARGB(255, 8, 0, 10))
+                      borderSide: BorderSide(color: Color.fromARGB(255, 227, 167, 76))
                     ),
-                    fillColor: const Color.fromARGB(255, 202, 132, 230), 
+                    fillColor: Color.fromARGB(255, 183, 186, 191), 
                     filled: true,
                     hintText: hintText,
                   ),
