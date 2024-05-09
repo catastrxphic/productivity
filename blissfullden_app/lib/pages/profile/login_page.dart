@@ -25,7 +25,7 @@ class LoginPage extends StatelessWidget {
       // ignore: use_build_context_synchronously
       Navigator.of(context).push(
         MaterialPageRoute(
-          builder: (context)=> const MyHomePage(title: 'home',)
+          builder: (context)=> const MyHomePage()
         )
       );
     }
