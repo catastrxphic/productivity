@@ -6,7 +6,7 @@ import 'package:blissfullden_app/pages/timing/timing_page.dart';
 import 'package:flutter/material.dart';
 
 class FirstPage extends StatefulWidget{
-  FirstPage({super.key});
+  const FirstPage({super.key});
 
   @override
   State<FirstPage> createState() => _FirstPageState();
@@ -23,17 +23,17 @@ class _FirstPageState extends State<FirstPage> {
 
   final List _pages = [
     // Dashboard Page
-    ProfilePage(),
+    const ProfilePage(),
     // Tasks Page
-    MyHomePage(),
+    const MyHomePage(),
     // Events Page
-    EventsPage(),
+    const EventsPage(),
     // Timing Page
-    TimingPage(),
+    const TimingPage(),
     // Schedule Page
-    SchedulePage(),
+    const SchedulePage(),
     // Profile Page
-    ProfilePage()
+    const ProfilePage()
   ];
 
   @override
