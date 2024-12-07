@@ -26,7 +26,7 @@ class CreatePageState extends State<CreatePage> {
       ),
       body: Stack(
         children: [
-          SizedBox(height: 100), 
+          const SizedBox(height: 100), 
           Container(
             decoration: const BoxDecoration(
               image: DecorationImage(

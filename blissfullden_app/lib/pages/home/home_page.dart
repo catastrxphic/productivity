@@ -48,7 +48,7 @@ class _FirstPageState extends State<FirstPage> {
         unselectedLabelStyle: const TextStyle(color: Colors.black),
         currentIndex: _selectedIndex,
         onTap: _navigateBottomBar,
-        items: [
+        items: const [
           // Dashboard Page
           BottomNavigationBarItem(
             icon: Icon(Icons.home_outlined, color: Colors.black,),
