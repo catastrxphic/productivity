@@ -8,11 +8,11 @@ class UpdatePage extends StatefulWidget {
   final Client client;
 
   const UpdatePage({
-    Key? key,
+    super.key,
     required this.client,
     required this.id,
     required this.task,
-  }) : super(key: key);
+  });
 
   @override
   UpdatePageState createState() => UpdatePageState();
@@ -35,7 +35,7 @@ class UpdatePageState extends State<UpdatePage> {
       ),
       body: Stack(
         children: [
-          SizedBox(height: 100), 
+          const SizedBox(height: 100), 
           Container(
             decoration: const BoxDecoration(
               image: DecorationImage(
