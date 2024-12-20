@@ -1,9 +1,11 @@
 import 'package:blissfullden_app/components/button.dart';
 import 'package:blissfullden_app/components/my_textfield.dart';
 import 'package:blissfullden_app/pages/profile/register_page.dart';
+import 'package:blissfullden_app/pages/profile/user_info_page.dart';
 import 'package:blissfullden_app/pages/tasks/task_page.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
+import 'package:shared_preferences/shared_preferences.dart';
 
 
 
@@ -22,11 +24,13 @@ class LoginPage extends StatelessWidget {
     );
 
     if (response.statusCode == 200){
+      // save state
+      final prefs = await SharedPreferences.getInstance();
+      await prefs.setBool('isLoggedIn', true);
+
       // ignore: use_build_context_synchronously
-      Navigator.of(context).push(
-        MaterialPageRoute(
-          builder: (context)=> const MyHomePage()
-        )
+      Navigator.of(context).pushReplacement(
+        MaterialPageRoute(builder: (context)=> const UserInfoPage()),
       );
     }
     else{
