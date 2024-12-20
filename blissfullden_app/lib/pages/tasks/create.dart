@@ -7,9 +7,9 @@ class CreatePage extends StatefulWidget {
   final Client client;
 
   const CreatePage({
-    Key? key,
+    super.key,
     required this.client,
-  }) : super(key: key);
+  });
 
   @override
   CreatePageState createState() => CreatePageState();
@@ -76,7 +76,7 @@ class CreatePageState extends State<CreatePage> {
                   Navigator.pop(context);
                 },
                 style: ElevatedButton.styleFrom(
-                  foregroundColor: Colors.white, backgroundColor: Color.fromARGB(255, 138, 53, 166), 
+                  foregroundColor: Colors.white, backgroundColor: const Color.fromARGB(255, 138, 53, 166), 
                   elevation: 5, 
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(10.0), // Button border radius
