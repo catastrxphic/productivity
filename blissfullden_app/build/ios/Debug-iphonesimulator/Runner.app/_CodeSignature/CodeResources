@@ -46,7 +46,7 @@
 		</data>
 		<key>Frameworks/App.framework/App</key>
 		<data>
-		Un7tn3ec9CZ0rCRksQl5thuSB5s=
+		RHWCVAKqPf9ny9sHP7AUzMRY/ow=
 		</data>
 		<key>Frameworks/App.framework/Info.plist</key>
 		<data>
@@ -54,7 +54,7 @@
 		</data>
 		<key>Frameworks/App.framework/_CodeSignature/CodeResources</key>
 		<data>
-		WNNT2UTIM8FnW0G6iHn3jntyAm4=
+		1l8rlZCxzec3Nq1Rp2EESbZDqSg=
 		</data>
 		<key>Frameworks/App.framework/flutter_assets/AssetManifest.bin</key>
 		<data>
@@ -70,7 +70,7 @@
 		</data>
 		<key>Frameworks/App.framework/flutter_assets/NOTICES.Z</key>
 		<data>
-		MaGc5YN48qU/MtAqJMojLP41AAY=
+		D/CBmbxdT06EbmWWO8CFKqeNkZ4=
 		</data>
 		<key>Frameworks/App.framework/flutter_assets/fonts/MaterialIcons-Regular.otf</key>
 		<data>
@@ -82,7 +82,7 @@
 		</data>
 		<key>Frameworks/App.framework/flutter_assets/kernel_blob.bin</key>
 		<data>
-		VfpjWT/SI5jWxsM1sQqSJdTCxcc=
+		cxCIwwUdFQOvyIZ49MMZQAz7qdo=
 		</data>
 		<key>Frameworks/App.framework/flutter_assets/lib/images/Pin%20by%20Ren%C3%A9e%20on%20wallpaper%20_%20Scenery%20wallpaper,%20Beautiful%20art%20pictures,%20Aesthetic%20backgrounds.jpeg</key>
 		<data>
@@ -200,6 +200,26 @@
 		<data>
 		Ubat0LvE4LUgCwHeyl0Anx2vnzk=
 		</data>
+		<key>Frameworks/shared_preferences_foundation.framework/Info.plist</key>
+		<data>
+		Uyl+FKyo2aIvYD0LfWgt4xJlRtA=
+		</data>
+		<key>Frameworks/shared_preferences_foundation.framework/_CodeSignature/CodeResources</key>
+		<data>
+		fPag+2C03eIHC9Rw2XtCNNDHGn4=
+		</data>
+		<key>Frameworks/shared_preferences_foundation.framework/shared_preferences_foundation</key>
+		<data>
+		qoxwWdJJDczfnTwGyl/t64aCZyI=
+		</data>
+		<key>Frameworks/shared_preferences_foundation.framework/shared_preferences_foundation_privacy.bundle/Info.plist</key>
+		<data>
+		dOmtNFREVEkt9PFBA8czv4M8cnI=
+		</data>
+		<key>Frameworks/shared_preferences_foundation.framework/shared_preferences_foundation_privacy.bundle/PrivacyInfo.xcprivacy</key>
+		<data>
+		6uLTlq7fgHHWA8emYDf4ImHC+AY=
+		</data>
 		<key>Frameworks/url_launcher_ios.framework/Info.plist</key>
 		<data>
 		n2SEeZkKtbd3UD+YghZ3UXLpbag=
@@ -230,7 +250,7 @@
 		</data>
 		<key>Runner.debug.dylib</key>
 		<data>
-		BNN5H+hWw1jX+wxEe+h0aIU18BI=
+		bTxtnoCOPWtnqRQp3AjW743x/ro=
 		</data>
 		<key>__preview.dylib</key>
 		<data>
@@ -313,7 +333,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			xyNd5YrjTeJLSMd19YxYP174VxMV9rO9UcEeirONWOU=
+			rjfpxw5zvtLemriNS1G6qZsGw4F6NI/sRLlu8IMUFzc=
 			</data>
 		</dict>
 		<key>Frameworks/App.framework/Info.plist</key>
@@ -327,7 +347,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			PYYjh2jBC853reAE8xaY4KXAQ4sWmgRpDSkjg1hzaoE=
+			T7RANTY0vrO4wygEDF+8jaHxTVx6kDXLe7kibo666uk=
 			</data>
 		</dict>
 		<key>Frameworks/App.framework/flutter_assets/AssetManifest.bin</key>
@@ -355,7 +375,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			8sbtQDP2jGqaufXxel2ouNxpmcMmQ5FrnX/p4oTdaak=
+			Mg9pjfpTD4rkFJ4D33CqroRfOCZqsEsqym/u004RAc0=
 			</data>
 		</dict>
 		<key>Frameworks/App.framework/flutter_assets/fonts/MaterialIcons-Regular.otf</key>
@@ -376,7 +396,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			S9hRHNrhz/lJp3+eH9Rjw3sOSlI3foh/CWsZbPuIiOQ=
+			p58sHwN0z6+pqoRe0sn8LsJUoGkqVSYTVSB788NG0LI=
 			</data>
 		</dict>
 		<key>Frameworks/App.framework/flutter_assets/lib/images/Pin%20by%20Ren%C3%A9e%20on%20wallpaper%20_%20Scenery%20wallpaper,%20Beautiful%20art%20pictures,%20Aesthetic%20backgrounds.jpeg</key>
@@ -582,6 +602,41 @@
 			ZepykIMSjfzhwAcmupMrkaqvXkhza1ZE3TdHjl8odaw=
 			</data>
 		</dict>
+		<key>Frameworks/shared_preferences_foundation.framework/Info.plist</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			R6CqCjWU1LvZnADC2e6IP5Hij0B/Ef19GT5Byz+CD4c=
+			</data>
+		</dict>
+		<key>Frameworks/shared_preferences_foundation.framework/_CodeSignature/CodeResources</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			sJNHkz+DLhcf9kuq4gn0qKOGZq9mcKyB6u0ukRncx5M=
+			</data>
+		</dict>
+		<key>Frameworks/shared_preferences_foundation.framework/shared_preferences_foundation</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			EhIC8p/cXAcCJsw6496Cv/nfl20CnOKNJxaO4dl+KYs=
+			</data>
+		</dict>
+		<key>Frameworks/shared_preferences_foundation.framework/shared_preferences_foundation_privacy.bundle/Info.plist</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			Ev+2p4awTzta9FLJgRQeDjlgjIAvYFC7QDc/JCc6LUk=
+			</data>
+		</dict>
+		<key>Frameworks/shared_preferences_foundation.framework/shared_preferences_foundation_privacy.bundle/PrivacyInfo.xcprivacy</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			BWQouTi9VwGKYAGdFcPB7i+nJ/I2h1mLu9k0hIsYCxo=
+			</data>
+		</dict>
 		<key>Frameworks/url_launcher_ios.framework/Info.plist</key>
 		<dict>
 			<key>hash2</key>
@@ -621,7 +676,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			zWFtdaNdzGtz80qEQkx6heYHeZ8+raQHqFFR853uWrg=
+			ZJVkSrWVBy7mzJ8JdXzZI0WGtepFGNOlJu9PusB9zD4=
 			</data>
 		</dict>
 		<key>__preview.dylib</key>
