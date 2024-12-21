@@ -2,7 +2,6 @@ import 'package:blissfullden_app/components/button.dart';
 import 'package:blissfullden_app/components/my_textfield.dart';
 import 'package:blissfullden_app/pages/profile/register_page.dart';
 import 'package:blissfullden_app/pages/profile/user_info_page.dart';
-import 'package:blissfullden_app/pages/tasks/task_page.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'package:shared_preferences/shared_preferences.dart';
