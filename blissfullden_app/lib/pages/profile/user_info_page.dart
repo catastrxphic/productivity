@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class UserInfoPage extends StatelessWidget{
-  const UserInfoPage({Key?key}): super(key:key);
+  const UserInfoPage({super.key});
 
   Future <void> logout(BuildContext context) async{
     final prefs = await SharedPreferences.getInstance();
