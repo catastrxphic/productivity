@@ -2,8 +2,9 @@
 import 'dart:convert';
 
 class Task {
-  int id;
-  String task;
+  final int id;
+  final String task;
+
   Task({
     required this.id,
     required this.task,
@@ -22,7 +23,7 @@ class Task {
   Map<String, dynamic> toMap() {
     return {
       'id': id,
-      'body': task,
+      'title': task,
     };
   }
 
@@ -32,15 +33,15 @@ class Task {
     }
 
     final int? id = map['id'] as int?;
-    final String? task = map['body'] as String?;
+    final String? task = map['title'] as String?;
 
     if (id == null || task == null) {
       throw ArgumentError("Invalid map: 'id' or 'task' value is null");
     }
 
     return Task(
-      id: id,
-      task: task,
+      id: map['id'],
+      task: map['task']
     );
   }
 
