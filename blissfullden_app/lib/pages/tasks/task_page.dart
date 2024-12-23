@@ -31,11 +31,16 @@ class MyHomePageState extends State<MyHomePage> {
 
   void _retrieveTasks() async {
     tasks = [];
+    var response = await client.get(url);
+    debugPrint("response: ${response.body}");
 
-    List response = json.decode((await client.get(url)).body);
-    for (var element in response) {
+    List responseList = jsonDecode(response.body);
+
+    for (var element in responseList) {
       tasks.add(Task.fromMap(element));
     }
+
+    debugPrint("Tasks: ${tasks.length}");
 
     setState(() {});
   }

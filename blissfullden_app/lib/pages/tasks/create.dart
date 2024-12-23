@@ -56,7 +56,7 @@ class CreatePageState extends State<CreatePage> {
                       decoration: InputDecoration(
                         filled: true,
                         fillColor: Colors.white.withOpacity(0.7),
-                        hintText: 'Enter your task here',
+                        hintText: 'Enter your task description',
                         border: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(10.0),
                           borderSide: BorderSide.none,
